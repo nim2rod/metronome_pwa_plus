@@ -4,6 +4,9 @@ body {
     margin: 0;
     text-align-last: center;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 img {
@@ -133,11 +136,6 @@ button {
     margin-top: 3px;
 }
 
-.input-cont button {
-    height: 1.5em;
-    align-self: center;
-}
-
 .cont-3 input {
     height: 3px;
     background-color: #b6d3e7;
@@ -178,6 +176,7 @@ button {
     border-radius: 0.4em;
     color: #355d76;
     font-size: 1.3em;
+    width: 167px;
 }
 
 .input-song::placeholder {
@@ -191,6 +190,8 @@ button {
 
 .add-song {
     background-color: #b6d3e7bf;
+    height: 1.5em;
+    align-self: center;
 }
 
 .add-song.active {
@@ -200,6 +201,7 @@ button {
 
 .silent-mode {
     background-color: #b6d3e7bf;
+    height: auto;
 }
 
 .silent-mode.active {
