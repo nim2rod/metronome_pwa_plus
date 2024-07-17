@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metronome</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <div class="cont-1">
+        <img id="start" src="./icons/play2.png" alt="">
+        <img id="stop" src="./icons/pause2.png" alt="">
+    </div>
+    <div class="cont-2">
+        <div class="bpm-cont">
+            <div class="bpm-show"></div>
+            <div class="bpm-controls">
+                <button id="minus" value="minus">-</button>
+                <button id="plus" value="plus">+</button>
+            </div>
+        </div>
+        <div class="volume-controls">
+            <img id="volumeUp" data-value="up" src="./icons/volume+.png" alt="">
+            <img id="volumeDown" data-value="down" src="./icons/volume-.png" alt="">
+        </div>
+    </div>
+    <div class="cont-3">
+        <div>
+            <div>
+                <input type="range" id="bpm" value="80" min="20" max="300" step="1">
+                <button id="tap-tempo" class="tap-tempo">Tap</button>
+            </div>
+            <div class="sound-container">
+                <img class="sound" src="./icons/metronome-2.png" alt="" data-value="met">
+                <img class="sound" src="./icons/stick.png" alt="" data-value="stick">
+                <img class="sound" src="./icons/cowbell.png" alt="" data-value="cowbell">
+                <img class="sound active" src="./icons/pulse.png" alt="" data-value="pulse">
+            </div>
+        </div>
+        <div class="divide-box">
+            <span data-value="1">1</span>
+            <span data-value="2">2</span>
+            <span data-value="3">3</span>
+            <span data-value="4">4</span>
+            <!-- <span data-value="5">5</span> -->
+            <!-- <span data-value="6">6</span> -->
+            <!-- <span data-value="7">7</span> -->
+            <!-- <span data-value="8">8</span> -->
+            <!-- <span data-value="9">9</span> -->
+        </div>
+    </div>
+    <div class="cont-4">
+        <div class="input-cont">
+            <input placeholder="Input new song" id="input-song" class="input-song" type="text">
+            <button id="add-song" class="add-song material-icons">add</button>
+            <button id="silent-mode" class="silent-mode">Bar Breaks</button>
+        </div>
+        <div class="list"></div>
+    </div>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js').then((registration) => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, (error) => {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+    </script>
+    <script src="popup.js"></script>
+</body>
+
+</html>

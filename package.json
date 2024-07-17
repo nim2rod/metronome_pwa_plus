@@ -1,0 +1,16 @@
+{
+  "name": "metronome_pwa",
+  "version": "1.0.0",
+  "description": "Use this free metronome and make your practice routine.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'No build necessary' && exit 0",
+    "start": "http-server ./public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

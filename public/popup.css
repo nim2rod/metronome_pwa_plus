@@ -1,0 +1,281 @@
+body {
+    font-family: auto;
+    padding: 7px;
+    margin: 0;
+    text-align-last: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    height: 4em;
+    cursor: pointer;
+}
+
+button {
+    font-size: 1.3em;
+    color: white;
+    background-color: #3e7b9e;
+    border: none;
+    margin: 0.5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.cont-1 {
+    margin-top: 1.5em;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    gap: 49px;
+}
+
+.cont-1 img {
+    height: 7em;
+}
+
+.cont-2 {
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.bpm-cont {
+    width: 70%;
+}
+
+.bpm-cont button:active {
+    color: #b6d3e7;
+}
+
+.bpm-show {
+    border: solid 1px #b6d3e7;
+    /* height: 47px; */
+    font-size: 3.5em;
+    border-radius: 4px;
+    color: #355d76;
+}
+
+.bpm-controls {
+    margin-top: 5px;
+}
+
+.bpm-controls button {
+    width: 48%;
+}
+
+.volume-controls {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7em;
+    margin-left: 16px;
+    gap: 3px;
+}
+
+.volume-controls button {
+    height: -webkit-fill-available;
+}
+
+.volume-controls img {
+    border: 1px solid #b6d3e7;
+    border-radius: 3px;
+}
+
+.volume-controls img:active {
+    background-color: #3e7b9e;
+}
+
+.btn-active {
+    background-color: #3e7b9e;
+}
+
+/* .volume-controls img:hover {
+    background-color: #b8b8ee;
+} */
+
+.sound-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.4em;
+}
+
+.sound {
+    height: 2.6em;
+    transform: scale(0.7);
+}
+
+.sound:active {
+    transform: scale(1);
+}
+
+.sound.active {
+    transform: scale(1);
+}
+
+.tap-tempo:active {
+    color: #b6d3e7;
+}
+
+.cont-3 {
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.input-cont {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: normal;
+    margin-top: 3px;
+    height: 2em;
+}
+
+.cont-3 input {
+    height: 3px;
+    background-color: #b6d3e7;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.divide-box {
+    margin-left: 25px;
+    display: grid;
+    align-content: center;
+    grid-gap: 2px;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.1em;
+}
+
+.divide-box span {
+    width: 1em;
+    height: 1em;
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0.5px solid #b6d3e7;
+    border-radius: 3px;
+    padding: 1px;
+}
+
+.divide-box span.active {
+    background-color: #b6d3e7;
+    border-radius: 3px;
+    color: white;
+}
+
+.input-song {
+    border-style: none;
+    border-radius: 0.4em;
+    color: #355d76;
+    font-size: 1.3em;
+}
+
+.input-song::placeholder {
+    color: #678699;
+    text-align-last: start;
+}
+
+.input-song:focus {
+    outline: none;
+}
+
+.add-song {
+    background-color: #b6d3e7bf;
+}
+
+.add-song.active {
+    background-color: #b8b8ee;
+    background-color: #3e7b9e;
+}
+
+.silent-mode {
+    background-color: #b6d3e7bf;
+}
+
+.silent-mode.active {
+    background-color: #3e7b9e
+}
+
+.list {
+    text-align: -webkit-center;
+    margin-top: 10px;
+}
+
+.song {
+    background-color: #d3a2bd;
+    color: aquamarine;
+}
+
+.song-line {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+    width: 75%;
+    margin-bottom: 7px;
+    font-size: 1.4em;
+    padding: 3px;
+    font-family: serif;
+    text-transform: capitalize;
+    background-color: #b6d3e7bf;
+    color: white;
+}
+
+.song-line:hover {
+    background-color: #b8b8ee;
+    background-color: #3e7b9e;
+}
+
+.song-line.selected {
+    background-color: #b8b8ee;
+    background-color: #3e7b9e;
+}
+
+.song-line-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.song-line-right i {
+    display: flex;
+    align-items: center;
+}
+
+.delete-song {
+    height: 0.8em;
+}
+
+.delete-song:hover {
+    /* color: #355d76; */
+    color: #3e7b9e;
+    color: #b6d3e7bf;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+
+    90% {
+        transform: scale(1.06);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.metronome-play.pulsing {
+    animation: pulse infinite linear;
+}
