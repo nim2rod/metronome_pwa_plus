@@ -99,7 +99,7 @@ button {
 .sound-container {
     display: flex;
     justify-content: center;
-    gap: 1.4em;
+    gap: 0.7em;
 }
 
 .sound {
@@ -132,6 +132,11 @@ button {
     align-items: normal;
     margin-top: 3px;
     height: 2em;
+}
+
+.input-cont button {
+    height: 1.5em;
+    align-self: center;
 }
 
 .cont-3 input {
