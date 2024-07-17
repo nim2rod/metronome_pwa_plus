@@ -1,6 +1,6 @@
 {
     "name": "Metronome PWA Plus",
-    "short_name": "Metronome",
+    "short_name": "Metronome Plus",
     "description": "Use this free metronome and make your practice routine.",
     "start_url": "./index.html",
     "display": "standalone",
